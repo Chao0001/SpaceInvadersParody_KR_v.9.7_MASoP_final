@@ -1,6 +1,6 @@
 #include "Bullet.h"
 
-// накладываем текстуру на пулю
+// накладываем текстуру на пулю 
 Bullet::Bullet(const float& a, const float& b) : x(a), y(b)
 {
 	texture.loadFromFile("bullet.png");
