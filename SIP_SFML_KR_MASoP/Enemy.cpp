@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-// накладываем текстуру на врагов
+// накладываем текстуру на врагов 
 Enemy::Enemy(const int& n)
 {
 	numOfEnemy = n;
