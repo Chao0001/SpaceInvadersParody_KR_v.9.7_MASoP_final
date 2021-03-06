@@ -1,6 +1,6 @@
-//Пародия Space Invaders на SFML на языке C++
-//SFML 2.5.1 устанавливался через диспетчер пакетов NuGet
-//Использовался MS Visual Studio 2019, набор инструментов Visual Studio 2017 v.141, SDK 10.0.18362.0
+//РџР°СЂРѕРґРёСЏ Space Invaders РЅР° SFML РЅР° СЏР·С‹РєРµ C++
+//SFML 2.5.1 СѓСЃС‚Р°РЅР°РІР»РёРІР°Р»СЃСЏ С‡РµСЂРµР· РґРёСЃРїРµС‚С‡РµСЂ РїР°РєРµС‚РѕРІ NuGet
+//РСЃРїРѕР»СЊР·РѕРІР°Р»СЃСЏ MS Visual Studio 2019, РЅР°Р±РѕСЂ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ Visual Studio 2017 v.141, SDK 10.0.18362.0
 
 #include <SFML/Graphics.hpp>
 #include "classes.h"
@@ -34,7 +34,7 @@ int main()
 	{
 		srand(time(0));
 
-		//фон
+		//С„РѕРЅ
 		spriteBackground.setTexture(textureBackground);
 		spriteBackground.setPosition(0, 0);
 
@@ -47,10 +47,10 @@ int main()
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				exit(0);
 		}
-		//фон
+		//С„РѕРЅ
 		window.draw(spriteBackground);
 
-		//игрок
+		//РёРіСЂРѕРє
 		spaceship.Move();
 		spaceship.Shoot(bullets, spaceship);
 		spaceship.Draw(window);
@@ -59,19 +59,19 @@ int main()
 		spaceship.Dead();
 		stats.PlayAgain(window, spaceship, bullet, enemies, bullets);
 
-		// противник
+		// РїСЂРѕС‚РёРІРЅРёРєРё
 		enemy.AddEnemies(enemies);
 		enemy.Draw(window, enemies);
 		enemy.Move(enemies);
 		enemy.DeleteEnemies(enemies, spaceship);
 
-		// пуля
+		// РїСѓР»СЏ
 		bullet.Draw(window, bullets);
 		bullet.Move(bullets);
 		bullet.DeleteBullets(bullets);
 		bullet.Collision(bullets, enemies);
 
-		// статистика и время
+		// СЃС‚Р°С‚РёСЃС‚РёРєР° Рё РІСЂРµРјСЏ
 		stats.DrawLine(window);
 		stats.DisplayLives(window, spaceship);
 		stats.DisplayScore(window, bullet);
