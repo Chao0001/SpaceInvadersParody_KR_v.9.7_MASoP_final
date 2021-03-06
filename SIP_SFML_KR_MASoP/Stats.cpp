@@ -1,6 +1,6 @@
 #include "Stats.h"
 
-// текст на экране
+//С‚РµРєСЃС‚ РЅР° СЌРєСЂР°РЅРµ
 Statistics::Statistics() {
 	font.loadFromFile("arial.ttf");
 	text.setFont(font);
@@ -23,7 +23,7 @@ void Statistics::DisplayScore(sf::RenderWindow& w, Bullet& b)
 	w.draw(text);
 }
 
-// разделительная линия между статистикой и игровой областью
+//  СЂР°Р·РґРµР»РёС‚РµР»СЊРЅР°СЏ Р»РёРЅРёСЏ РјРµР¶РґСѓ СЃС‚Р°С‚РёСЃС‚РёРєРѕР№ Рё РёРіСЂРѕРІРѕР№ РѕР±Р»Р°СЃС‚СЊСЋ
 void Statistics::DrawLine(sf::RenderWindow& w)
 {
 	for (int i = 770; i < 775; i++)
