@@ -1,6 +1,6 @@
 #include "Spaceship.h"
 
-// накладываем текстуру на игрока
+// РЅР°РєР»Р°РґС‹РІР°РµРј С‚РµРєСЃС‚СѓСЂСѓ РЅР° РёРіСЂРѕРєР°
 Spaceship::Spaceship()
 {
 	texture.loadFromFile("player.png");
@@ -8,7 +8,7 @@ Spaceship::Spaceship()
 }
 
 
-//движение игрока
+//РґРІРёР¶РµРЅРёРµ РёРіСЂРѕРєР°
 void Spaceship::Move()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && 0.0 < x) {
@@ -20,7 +20,7 @@ void Spaceship::Move()
 }
 
 
-//выстрел
+//РІС‹СЃС‚СЂРµР»
 void Spaceship::Shoot(std::vector<Bullet*>& b, Spaceship& s)
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
@@ -41,7 +41,7 @@ void Spaceship::Draw(sf::RenderWindow& w)
 	w.draw(sprite);
 }
 
-// касание врагом игрока
+// РєР°СЃР°РЅРёРµ РІСЂР°РіРѕРј РёРіСЂРѕРєР°
 void Spaceship::Collision(std::vector<Enemy*>& e)
 {
 	sf::FloatRect rect(x, y, 75.0f, 52.0f);
@@ -65,7 +65,7 @@ bool Spaceship::Dead()
 }
 
 
-//сложность 
+//СЃР»РѕР¶РЅРѕСЃС‚СЊ
 void Spaceship::ControlDifficulty(Bullet& b, Enemy& e)
 {
 	if (b.GetScore() < 40)
